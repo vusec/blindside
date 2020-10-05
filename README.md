@@ -28,7 +28,8 @@ on a CPU with a different cache size or a different cache-associativity.
 
 # Config
 
-Exploits can be configured to skip certain parts with macros in local\_conig.h files.
+Exploits can be configured to skip certain parts with macros in config.h files
+in the exploit directories.
 
 # Preparation
 
@@ -40,3 +41,8 @@ $ echo 1024 | sudo tee /proc/sys/vm/nr_hugepages
 $ for gov in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do sudo sh -c "echo performance > $gov"; done
 $ ./make_evsets_lib.sh
 ```
+
+# Run exploits
+
+To run the exploits, change your directory to any of the folders under [exploits](exploits)
+and run the commands `make` and `./poc`.
