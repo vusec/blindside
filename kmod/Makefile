@@ -1,7 +1,6 @@
 KMOD_DIR := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
 obj-m += kmod.o
-ccflags-y += -mindirect-branch=thunk
 
 all: kmod.ko libkmod_driver.so test
 
